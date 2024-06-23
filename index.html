@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio de Nivia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="inicio">
+    <h1>Portfólio pessoal</h1>
+    <p>Olá, seja bem-vindo! Aqui você poderá me conhecer e explorar alguns projetos que realizei durante minha carreira na área de tecnologia.</p>
+</section>
+
+<section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>Olá, me chamo Nívia Arruda, tenho 42 anos, sou de Recife- PE e uma apaixonada por filmes e séries. Em 2023 decidi iniciar os estudos na área de tecnologia visando aprender novas habilidades e explorar novas áreas de interesse. Hoje trabalho como administradora de banco de dados em uma empresa que presta serviços de tecnologia. </p>
+    
+    <p>Principais características:</p>
+    <ul>
+        <li>Sou uma pessoa organizada com ótima gestão de tempo, sempre atenta aos detalhes, a fim de garantir que o trabalho seja entregue com uma alta qualidade. Apesar de ser metódica sou uma pessoa flexível e me adapto bem a mudanças.</li>
+        <li>Tenho ótima comunicação e adoro trabalhar em equipe e acredito que a colaboração é essencial. Penso que contribuir com novas ideias, ouvir, respeitar as diferenças e confiar nos meus colegas são características fundamentais para desenvolver um bom trabalho em equipe.</li>
+        <li>Sou extremamente motivada e sempre busco novos desafios. Desistir nunca é uma opção! Sou focada, determinada e apaixonada pelo que faço.</li>
+        
+    </ul>
+
+</ul>
+
+<p><a href="https://www.linkedin.com/in/nivia-arruda/" target="_blank">Meu LinkedIn</a></p>
+  
+    
+</section>
+
+<section id="formacao">
+    <h2>Formação</h2>
+    <p style="font-weight: bold;">Graduação em Secretariado Executivo</p>
+    <p>Instituição: UFPE</p>
+    <p>Término: Jun/2005</p> <!-- Data atualizada -->
+    <p style="font-weight: bold;">Graduação em Tecnologia em Banco de Dados</p>
+    <p>Instituição: Uninter</p>
+    <p>Inicio: Jun/2023</p>
+    <p style="font-weight: bold;">Idiomas:</p>
+    <ul>
+        <li>Inglês - Nível Intermediário</li>
+        <li>Espanhol - Nível Básico</li>        
+    </ul>
+</section>
+
+<section id="portfolio">
+    <h2>Portfólio</h2>
+    <p>Aqui você pode encontrar alguns dos meus projetos e trabalhos anteriores:</p>
+    <ul>
+        <li><a href="http://site-curriculo-edn.s3-website-us-east-1.amazonaws.com/" target="_blank">Projeto 1</a></li>
+        <li><a href="https://medium.com/@niviaarruda/criando-uma-aws-vpc-7fe86874cd3b" target="_blank">Projeto 2</a></li>
+    </ul>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <div class="contato-form">
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+<footer>
+    &copy; 2024 Nívia Arruda da Rocha - Todos os direitos reservados.
+</footer>
+<script>
+    // Função para exibir o conteúdo da seção com base no link clicado
+    function exibirConteudo(id) {
+        // Oculta todas as seções
+        const secoes = document.querySelectorAll('section');
+        secoes.forEach((secao) => {
+            secao.style.display = 'none';
+        });
+
+        // Exibe a seção com o ID correspondente ao link clicado
+        const secaoSelecionada = document.getElementById(id);
+        if (secaoSelecionada) {
+            secaoSelecionada.style.display = 'block';
+        }
+    }
+
+    // Adiciona um evento de clique a todos os links do menu
+    const linksMenu = document.querySelectorAll('nav ul li a');
+    linksMenu.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            const href = event.currentTarget.getAttribute('href').substring(1); // Remove o "#" do href
+            exibirConteudo(href);
+        });
+    });
+
+    // Exibe a primeira seção ao carregar a página
+    exibirConteudo('inicio');
+</script>
+</body>
+</html>
